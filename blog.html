@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>Blog Website</title>
+    
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    primary: 'rgb(180, 244, 97)',
+                    secondary: 'rgba(17, 17, 17, 0.7)',
+                    thridly: 'rgb(17, 17, 17)',
+                    
+                   
+                },
+                fontFamily: {
+                    Lexend: 'Lexend', 
+                },
+            },
+        },
+    }
+</script>
+
+</head>
+<body>
+
+    <header class="bg-[#F9F7F3]">
+      <div class="bg-[#F9F7F3]">
+        <div class="navbar w-10/12 mx-auto pt-4  flex justify-between items-center">
+            <div id="btn-blog" class="navbar-start">
+                <a class="btn  text-xl bg-primary">Home</a>
+            </div>
+        <button  id="btn-home"  class="bg-lime-300 px-5 py-2 rounded-lg font-semibold hidden"  >  Home
+          </button>
+            <div class="navbar-center hidden space-x-3 lg:flex">
+                <img src="./assets/logo.png" alt="" srcset="">
+                <p class="font-bold text-text1">Donate Bangladesh</p>
+            </div>
+            <div class="navbar-end flex items-center">
+                <img src="./assets/coin.png" alt="" srcset="">
+                <p class="text-xl font-bold "><span id="main-balance">5500</span> BDT</p>
+            </div>
+        </div>
+        
+    </div>
+      </header>
+      <br>
+      <h1 class="text-center mr-50 font-bold text-5xl">Important FAQ <span><i class="fa-regular fa-comment-dots"></i></span></h1>
+      <br />
+     
+      
+
+ <div  class="m-4 md:m-0 md:w-9/12 md:mx-auto">
+    <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="" />
+        <div class="collapse-title text-xl font-medium">
+        1. What is the Document Object Model (DOM)</div>
+        <div class="collapse-content">
+          <p>  dom is a programming interface structure of an html object   </p>
+        </div>
+      </div> <br>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="" />
+        <div class="collapse-title text-xl font-medium">
+          2. How do you select an element from the DOM?
+        </div>
+        <div class="collapse-content">
+          <p>
+            HTML is the markup language used to structure web content, while the DOM is an object-based representation of that HTML content in the browser. When a web page loads, the browser converts HTML into the DOM, making it accessible and modifiable using JavaScript.
+          </p>
+        </div>
+      </div> <br>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="" />
+        <div class="collapse-title text-xl font-medium">
+          3. What is event delegation in the context of the DOM, and why is it useful?
+        </div>
+        <div class="collapse-content">
+          <p>
+            DOM elements represent HTML tags while DOM nodes are the general term for all items in the DOM tree, which includes elements, text, attributes, and comments. 
+          </p>
+        </div>
+      </div> <br>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="" />
+        <div class="collapse-title text-xl font-medium">
+          4.How do you manipulate an element's attributes and styles using the DOM?
+        </div>
+       <div class="collapse-content">
+    <p> Event delegation is a technique in JavaScript where you add a single event listener to a parent element instead of adding listeners to individual child elements  </p>
+       </div>
+    </div>
+
+ </div>
+
+  <script src="./js/index.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/click.js"></script>
+    
+</body>
+</html>
