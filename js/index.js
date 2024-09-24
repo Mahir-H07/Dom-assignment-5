@@ -7,15 +7,13 @@ document.getElementById('btn-blog').addEventListener('click',function(event){
 })
 
 
+
 document.getElementById('btn-donate-noakhali').addEventListener('click',function(){
     const mainBalance = Number(getTextValue('main-balance'));
     const donateNoakhali = Number(getTextValue('donate-noakhali'))  
     const InputDonateNoakhali= Number(getInputValue('input-donate-noakhali'))
-    const inputDonate = document.getElementById('input-donate-noakhali').value
     
-   
-    
-    if ( inputDonate === '' || isNaN(InputDonateNoakhali) || InputDonateNoakhali > mainBalance ) {
+    if ( isNaN(InputDonateNoakhali) || InputDonateNoakhali > mainBalance || InputDonateNoakhali<0 ) {
      onclick=modal_1.showModal()
      document.getElementById('input-donate-noakhali').value = '';
  
@@ -24,21 +22,20 @@ document.getElementById('btn-donate-noakhali').addEventListener('click',function
      document.getElementById('main-balance').innerText = showMainBalance;
  
      const showNoakhaliDonate = donateNoakhali+InputDonateNoakhali;
-     console.log(showNoakhaliDonate);
-     
+    
      document.getElementById('donate-noakhali').innerText = showNoakhaliDonate;
      const history = document.getElementById('history-btn');
      const div = document.createElement('div');
      div.innerHTML = `
          <div class="w-9/12 mx-auto border-2 p-5 rounded-xl my-7">
-             <h1 class="text-xl font-bold">${InputDonateNoakhali} Taka is Donate for Flood at Noakhali, Bangladesh</h1>
-             <p class="text-text2 font-medium mt-4">Date: ${new Date().toString()}</p>
+             <h4 class="lg:text-2xl md:text-2xl text-lg font-bold">${InputDonateNoakhali} Taka is Donate for Flood at Noakhali, Bangladesh</h4>
+             <p class=" font-semibold mt-3">Date: ${new Date().toString()}</p>
          </div>
      `;
      history.appendChild(div);
  
      onclick=modal_2.showModal()
-     document.getElementById('input-donate-noakhali').value 
+     document.getElementById('input-donate-noakhali').value = '';
      
     }
      
@@ -49,9 +46,8 @@ document.getElementById('btn-donate-noakhali').addEventListener('click',function
      const mainBalance = Number(getTextValue('main-balance'));
      const donatefeni = Number(getTextValue('doante-feni'))
      const inputDonateFeni = Number(getInputValue('input-donate-feni'))
-     const inputDonate = document.getElementById('input-donate-feni').value
  
-     if (inputDonate === '' || isNaN(inputDonateFeni) || inputDonateFeni>mainBalance) {
+     if ( isNaN(inputDonateFeni) || inputDonateFeni>mainBalance || inputDonateFeni<0) {
          onclick=modal_1.showModal()
          document.getElementById('input-donate-feni').value=''
      }else{
@@ -65,8 +61,8 @@ document.getElementById('btn-donate-noakhali').addEventListener('click',function
          const div = document.createElement('div');
          div.innerHTML = `
              <div class="w-9/12 mx-auto border-2 p-5 rounded-xl my-7">
-                 <h1 class="text-xl font-bold">${inputDonateFeni} Taka is Donated Donate for Flood Relief in Feni,Bangladesh</h1>
-                 <p class="text-text2 font-medium mt-4">Date: ${new Date().toString()}</p>
+                 <h4 class="lg:text-2xl md:text-2xl text-lg font-bold">${inputDonateFeni} Taka is Donated for Flood Relief in Feni,Bangladesh</h4>
+                 <p class=" font-semibold mt-3">Date: ${new Date().toString()}</p>
              </div>
          `;
          history.appendChild(div);
@@ -78,29 +74,27 @@ document.getElementById('btn-donate-noakhali').addEventListener('click',function
  })
  
  
- document.getElementById('btn-donate-quta').addEventListener('click',function(){
+ document.getElementById('btn-donate-quota').addEventListener('click',function(){
     const mainBalance = Number(getTextValue('main-balance'));
-    const inputQutaDonate = Number(getInputValue('input-donate-quta'))
-    const qutaDonate = Number(getTextValue('donate-quta'));
-    const inputDonate = document.getElementById('input-donate-quta').value
-     
-    if (inputDonate ==='' || isNaN(inputQutaDonate)|| inputQutaDonate>mainBalance) {
+    const inputQuotaDonate = Number(getInputValue('input-donate-quota'))
+    const donateQuota = Number(getTextValue('donate-quota'));
+   
+    if ( isNaN(inputQuotaDonate)|| inputQuotaDonate > mainBalance || inputQuotaDonate<0) {
          onclick = modal_1.showModal()
-         document.getElementById('input-donate-quta').value=''
+         document.getElementById('input-donate-quota').value=''
+         
     }else{
-      document.getElementById('main-balance').innerText = mainBalance-inputQutaDonate;
-      document.getElementById('donate-quta').innerText = qutaDonate+inputQutaDonate;
+      document.getElementById('main-balance').innerText = mainBalance - inputQuotaDonate;
+      document.getElementById('donate-quota').innerText = donateQuota + inputQuotaDonate;
       
- 
- 
-      document.getElementById('input-donate-quta').value =''
+      document.getElementById('input-donate-quota').value =''
       onclick=modal_4.showModal()
       const history = document.getElementById('history-btn');
          const div = document.createElement('div');
          div.innerHTML = `
              <div class="w-9/12 mx-auto border-2 p-5 rounded-xl my-7">
-                 <h1 class="text-xl font-bold">${inputQutaDonate} Taka is Donated Aid for Injured in the Quota Movement</h1>
-                 <p class="text-text2 font-medium mt-4">Date: ${new Date().toString()}</p>
+                 <h4 class="lg:text-2xl md:text-2xl text-lg font-bold">${inputQuotaDonate} Taka is Aid for Injured in the Quota Movement</h4>
+                 <p class=" font-semibold mt-3">Date: ${new Date().toString()}</p>
              </div>
          `;
          history.appendChild(div);
@@ -111,6 +105,7 @@ document.getElementById('btn-donate-noakhali').addEventListener('click',function
  })
  
  
+
  document.getElementById('history').addEventListener('click',function(){
     sectionVisible('history-btn')
     colourChange('history')
