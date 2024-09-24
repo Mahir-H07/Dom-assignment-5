@@ -2,10 +2,10 @@
 document.getElementById("btn-blog").addEventListener("click", function () {
     window.location.href = "../blog.html";
   });
-  document.getElementById("home-click").addEventListener("click", function () {
+  document.getElementById("home-bg").addEventListener("click", function () {
     window.location.href = "../index.html";
   });
-  console.log('home-bg"');
+
 
 document.getElementById('btn-donate-noakhali').addEventListener('click',function(){
     const mainBalance=Number(getTextValue('main-balance'));
