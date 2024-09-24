@@ -1,10 +1,11 @@
 
 document.getElementById("btn-blog").addEventListener("click", function () {
-    window.location.href = "blog.html";
+    window.location.href = "../blog.html";
   });
-  document.getElementById("btn-home").addEventListener("click", function () {
-    window.location.href = "index.html";
+  document.getElementById("home-click").addEventListener("click", function () {
+    window.location.href = "../index.html";
   });
+  console.log('home-bg"');
 
 document.getElementById('btn-donate-noakhali').addEventListener('click',function(){
     const mainBalance=Number(getTextValue('main-balance'));
@@ -18,12 +19,12 @@ document.getElementById('btn-donate-noakhali').addEventListener('click',function
  
     }else{
      const showMainBalance = mainBalance-InputDonateNoakhali;
-     document.getElementById('main-balance').innerText=showMainBalance;
+     document.getElementById('main-balance').innerText = showMainBalance;
  
      const showNoakhaliDonate =donateNoakhali+InputDonateNoakhali;
      console.log(showNoakhaliDonate);
      
-     document.getElementById('donate-noakhali').innerText=showNoakhaliDonate;
+     document.getElementById('donate-noakhali').innerText = showNoakhaliDonate;
      const history = document.getElementById('history-btn');
      const div = document.createElement('div');
      div.innerHTML = `
@@ -44,7 +45,7 @@ document.getElementById('btn-donate-noakhali').addEventListener('click',function
  
  document.getElementById('btn-donate-feni').addEventListener('click',function(){
      const mainBalance = Number(getTextValue('main-balance'));
-     const donatefeni=Number(getTextValue('feni-doante'))
+     const donatefeni=Number(getTextValue('doante-feni'))
      const inputDonateFeni=Number(getInputValue('input-donate-feni'))
      const inputDonate = document.getElementById('input-donate-feni').value.trim()
  
@@ -53,9 +54,9 @@ document.getElementById('btn-donate-noakhali').addEventListener('click',function
          document.getElementById('input-donate-feni').value=''
      }else{
          
-         document.getElementById('main-balance').innerText=mainBalance-inputDonateFeni;
-         document.getElementById('feni-doante').innerText=donatefeni+inputDonateFeni
-         document.getElementById('input-donate-feni').value=''
+         document.getElementById('main-balance').innerText = mainBalance-inputDonateFeni;
+         document.getElementById('doante-feni').innerText = donatefeni+inputDonateFeni
+         document.getElementById('input-donate-feni').value =''
          onclick=modal_3.showModal()
  
          const history = document.getElementById('history-btn');
@@ -84,12 +85,12 @@ document.getElementById('btn-donate-noakhali').addEventListener('click',function
          onclick=modal_1.showModal()
          document.getElementById('input-donate-quta').value=''
     }else{
-      document.getElementById('main-balance').innerText=mainBalance-inputQutaDonate;
-      document.getElementById('donate-quta').innerText=qutaDonate+inputQutaDonate;
+      document.getElementById('main-balance').innerText = mainBalance-inputQutaDonate;
+      document.getElementById('donate-quta').innerText = qutaDonate+inputQutaDonate;
       
  
  
-      document.getElementById('input-donate-quta').value=''
+      document.getElementById('input-donate-quta').value =''
       onclick=modal_4.showModal()
       const history = document.getElementById('history-btn');
          const div = document.createElement('div');
