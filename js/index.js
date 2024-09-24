@@ -1,17 +1,15 @@
 
-document.getElementById("btn-blog").addEventListener("click", function () {
-    window.location.href = "../blog.html";
-  });
-  document.getElementById("home-click").addEventListener("click", function () {
-    window.location.href = "../index.html";
-  });
+document.getElementById('btn-click').addEventListener('click',function(event){
+    event.preventDefault();
+    window.location.href = "./blog.html";
 
+})
 
 document.getElementById('btn-donate-noakhali').addEventListener('click',function(){
-    const mainBalance=Number(getTextValue('main-balance'));
-    const donateNoakhali=Number(getTextValue('donate-noakhali'))  
+    const mainBalance = Number(getTextValue('main-balance'));
+    const donateNoakhali = Number(getTextValue('donate-noakhali'))  
     const InputDonateNoakhali= Number(getInputValue('input-donate-noakhali'))
-    const inputDonate = document.getElementById('input-donate-noakhali').value.trim()
+    const inputDonate = document.getElementById('input-donate-noakhali').value
     
     if ( inputDonate === '' || isNaN(InputDonateNoakhali) || InputDonateNoakhali > mainBalance ) {
      onclick=modal_1.showModal()
@@ -21,7 +19,7 @@ document.getElementById('btn-donate-noakhali').addEventListener('click',function
      const showMainBalance = mainBalance-InputDonateNoakhali;
      document.getElementById('main-balance').innerText = showMainBalance;
  
-     const showNoakhaliDonate =donateNoakhali+InputDonateNoakhali;
+     const showNoakhaliDonate = donateNoakhali+InputDonateNoakhali;
      console.log(showNoakhaliDonate);
      
      document.getElementById('donate-noakhali').innerText = showNoakhaliDonate;
@@ -45,9 +43,9 @@ document.getElementById('btn-donate-noakhali').addEventListener('click',function
  
  document.getElementById('btn-donate-feni').addEventListener('click',function(){
      const mainBalance = Number(getTextValue('main-balance'));
-     const donatefeni=Number(getTextValue('doante-feni'))
-     const inputDonateFeni=Number(getInputValue('input-donate-feni'))
-     const inputDonate = document.getElementById('input-donate-feni').value.trim()
+     const donatefeni = Number(getTextValue('doante-feni'))
+     const inputDonateFeni = Number(getInputValue('input-donate-feni'))
+     const inputDonate = document.getElementById('input-donate-feni').value
  
      if (inputDonate === '' || isNaN(inputDonateFeni) || inputDonateFeni>mainBalance) {
          onclick=modal_1.showModal()
@@ -76,13 +74,13 @@ document.getElementById('btn-donate-noakhali').addEventListener('click',function
  
  
  document.getElementById('btn-donate-quta').addEventListener('click',function(){
-    const mainBalance=Number(getTextValue('main-balance'));
-    const inputQutaDonate=Number(getInputValue('input-donate-quta'))
-    const qutaDonate=Number(getTextValue('donate-quta'));
-    const inputDonate= document.getElementById('input-donate-quta').value.trim()
+    const mainBalance = Number(getTextValue('main-balance'));
+    const inputQutaDonate = Number(getInputValue('input-donate-quta'))
+    const qutaDonate = Number(getTextValue('donate-quta'));
+    const inputDonate = document.getElementById('input-donate-quta').value
      
-    if (inputDonate==='' || isNaN(inputQutaDonate)|| inputQutaDonate>mainBalance) {
-         onclick=modal_1.showModal()
+    if (inputDonate ==='' || isNaN(inputQutaDonate)|| inputQutaDonate>mainBalance) {
+         onclick = modal_1.showModal()
          document.getElementById('input-donate-quta').value=''
     }else{
       document.getElementById('main-balance').innerText = mainBalance-inputQutaDonate;
