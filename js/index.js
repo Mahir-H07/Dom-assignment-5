@@ -1,15 +1,19 @@
 
-document.getElementById('btn-click').addEventListener('click',function(event){
+document.getElementById('btn-blog').addEventListener('click',function(event){
     event.preventDefault();
     window.location.href = "./blog.html";
+ 
 
 })
+
 
 document.getElementById('btn-donate-noakhali').addEventListener('click',function(){
     const mainBalance = Number(getTextValue('main-balance'));
     const donateNoakhali = Number(getTextValue('donate-noakhali'))  
     const InputDonateNoakhali= Number(getInputValue('input-donate-noakhali'))
     const inputDonate = document.getElementById('input-donate-noakhali').value
+    
+   
     
     if ( inputDonate === '' || isNaN(InputDonateNoakhali) || InputDonateNoakhali > mainBalance ) {
      onclick=modal_1.showModal()
@@ -66,6 +70,7 @@ document.getElementById('btn-donate-noakhali').addEventListener('click',function
              </div>
          `;
          history.appendChild(div);
+     
          
      }
      
@@ -106,3 +111,15 @@ document.getElementById('btn-donate-noakhali').addEventListener('click',function
  })
  
  
+ document.getElementById('history').addEventListener('click',function(){
+    sectionVisible('history-btn')
+    colourChange('history')
+    
+})
+
+document.getElementById('donation').addEventListener('click',function(){
+    sectionVisible('donate-btn')
+    colourChange('donation')
+})
+
+
