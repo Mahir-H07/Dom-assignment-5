@@ -8,13 +8,13 @@ function getInputValue(id){
      return textValue;
  }
  
- function sectionVisible(id){
+ function doubleSection(id){
      document.getElementById('donate-btn').classList.add('hidden');
      document.getElementById('history-btn').classList.add('hidden');
      document.getElementById(id).classList.remove('hidden')   
  }
  
- function colourChange(id){
+ function  colourSection(id){
      document.getElementById('donation').classList.remove('bg-primary')
      document.getElementById('history').classList.remove('bg-primary')
      document.getElementById(id).classList.add('bg-primary')
